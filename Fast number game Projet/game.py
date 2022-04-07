@@ -19,13 +19,13 @@ def random_predict(number:int=1) -> int:
         count += 1
         predict = np.random.randint(limit_a, limit_b)
         if predict > number:
-            limit_b = predict # Задаём верхнюю границу
-                       
+            limit_b = predict # Задаём верхнюю границу                       
         elif predict < number:
             limit_a = predict # Задаём нижнюю границу
     return count
 
 print(f'Количество попыток: {random_predict()}')
+
 
 def score_game(random_predict) -> int:
     """За какое количество попыток в среднем из 1000 подходов угадывает наш алгоритм
